@@ -1,0 +1,4 @@
+#!/bin/sh
+# Thin wrapper so callers never have to know where the venv lives.
+DIR=$(cd "$(dirname "$0")" && pwd)
+exec "$DIR/../.venv/bin/python" "$DIR/mnotes.py" "$@"
